@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Showcase</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #000;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        
+        @media (orientation: portrait) {
+            .container {
+                background-image: linear-gradient(to bottom, #eda154, #e94057, #f16846);
+                background-size: 200% 200%;
+            }
+            
+            .card {
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .col-md-4 {
+                padding: 15px;
+            }
+
+            .details-section summary {
+                padding: 10px;
+            }
+        }
+
+         
+        @media (orientation: landscape) {
+            .container {
+                background-image: linear-gradient(to right, #8a2387, #e94057, #f27121);
+                background-size: 200% 100%;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+
+        @keyframes bganm {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            animation: bganm 10s linear infinite;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid #555;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        h3 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .details-section {
+            margin: 10px 0;
+        }
+
+        details {
+            margin: 10px 0;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        summary {
+            padding: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        details li {
+            list-style: none;
+            padding: 5px 20px;
+        }
+
+        details a {
+            color: #007bff;
+            text-decoration: none;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        details a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #999;
+            margin-top: auto;
+        }
+
+        .making-border {
+            height: 2px;
+            background-color: #555;
+            margin: 10px auto;
+            width: 50%;
+        }
+
+        .img-fluid {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .feedback-form {
+            padding: 20px;
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .feedback-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .feedback-form .form-control {
+            margin-bottom: 15px;
+        }
+
+        .feedback-form .btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+        }
+        .figcaption{
+            text-align: center;
+            font-size: 20px;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                <div>SACRED Book Showcase: Details</div>
+                <div class="making-border"></div>
+            </h1>
+        </header>
+
+        <main>
+            <h3>Book 3: Mahabharat</h3>
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="Mahabharat.webp" class="img-fluid" alt="Book Cover" style="margin-bottom: 10px; margin-top: 20px; padding: 20px;" >
+                        <figcaption>
+                            The grand epic <strong>Mahabharata</strong>, narrating the legendary Kurukshetra war and the eternal teachings of dharma.
+                        </figcaption>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="details-section">
+                                <details>
+                                    <summary>Genre</summary>
+                                    <li> Hindu Scripture</li>
+                                    <li> Philosophy</li>
+                                </details>
+                                <details>
+                                    <summary>Index</summary>
+                                    <li><b>Introduction</b></li>
+                                    <details>
+                                        <summary>Chapter 1: Adi Parva (The Book of the Beginning)</summary>
+                                        <ul>
+                                            <li>Genealogy and origin of the Bharata dynasty</li>
+                                            <li>The creation of the universe and early epochs</li>
+                                            <li>Stories of King Shantanu, Bhishma, and the Kuru lineage</li>
+                                            <li>Birth and early lives of the Kuru princes</li>
+                                            <li>The appearance of Vyasa and the beginnings of the epic narrative</li>
+                                        </ul>
+                                    </details>
+                                    
+                                    <details>
+                                        <summary>Chapter 2: Sabha Parva (The Book of the Assembly Hall)</summary>
+                                        <ul>
+                                            <li>Splendor of the royal court and the assembly</li>
+                                            <li>The infamous game of dice and its disastrous consequences</li>
+                                            <li>The humiliation of Draupadi</li>
+                                            <li>Decisions that lead to the Pandavas’ exile and rising tensions</li>
+                                        </ul>
+                                    </details>
+                                    
+                                    <details>
+                                        <summary>Chapter 3: Vana Parva (The Book of the Forest)</summary>
+                                        <ul>
+                                            <li>The Pandavas’ years in exile amidst the forests</li>
+                                            <li>Encounters with sages, ascetics, and mystical beings</li>
+                                            <li>Spiritual lessons and moral tales narrated during their wanderings</li>
+                                            <li>Trials, penances, and the development of inner strength</li>
+                                        </ul>
+                                    </details>
+                                    
+                                    <details>
+                                        <summary>Chapter 4: Virata Parva (The Book of Virata)</summary>
+                                        <ul>
+                                            <li>The Pandavas live incognito in King Virata’s court</li>
+                                            <li>Adopting disguises and roles to hide their true identities</li>
+                                            <li>Key incidents and skirmishes that reveal their valor</li>
+                                            <li>The eventual emergence of their true selves</li>
+                                        </ul>
+                                    </details>
+                                    
+                                    <details>
+                                        <summary>Chapter 5: Udyoga Parva (The Book of Effort)</summary>
+                                        <ul>
+                                            <li>Diplomatic efforts and peace negotiations between the factions</li>
+                                            <li>Ambassadors and envoys attempting to avoid war</li>
+                                            <li>The buildup of tension and preparations for conflict</li>
+                                            <li>Philosophical discussions on duty and destiny</li>
+                                        </ul>
+                                    </details>
+                                    
+                                    <details>
+                                        <summary>Chapter 6: Bhishma Parva (The Book of Bhishma)</summary>
+                                        <ul>
+                                            <li>The commencement of the great Kurukshetra war</li>
+                                            <li>Bhishma leading the Kaurava forces with valor and duty</li>
+                                            <li>Major battles, strategies, and heroic feats on both sides</li>
+                                            <li>The delivery of the Bhagavad Gita by Krishna to Arjuna</li>
+                                        </ul>
+                                    </details>
+                                    
+                                    <details>
+                                        <summary>Chapter 7: Drona Parva (The Book of Drona)</summary>
+                                        <ul>
+                                            <li>Drona assumes command of the Kaurava army</li>
+                                            <li>Key confrontations and pivotal combat sequences</li>
+                                            <li>The tragic battle and death of Abhimanyu</li>
+                                            <li>Shifts in battle tactics and rising losses</li>
+                                        </ul>
+                                    </details>
+                                    
+                                    <details>
+                                        <summary>Chapter 8: Karna Parva (The Book of Karna)</summary>
+                                        <ul>
+                                            <li>Karna’s valor and pivotal role in the war</li>
+                                            <li>Duels and significant battles showcasing his skills</li>
+                                            <li>The unfolding of his tragic destiny</li>
+                                            <li>His confrontations with leading warriors from both sides</li>
+                                        </ul>
+                                    </details>
+                                    
+                                    <details>
+                                        <summary>Chapter 9: Shalya Parva (The Book of Shalya)</summary>
+                                        <ul>
+                                            <li>Shalya’s reluctant leadership of the Kaurava forces</li>
+                                            <li>The final intense phases of the war</li>
+                                            <li>Last-ditch strategies and dramatic combat encounters</li>
+                                            <li>The waning strength of the Kaurava camp</li>
+                                        </ul>
+                                    </details>
+                                    
+                                    <details>
+                                        <summary>Chapter 10: Sauptika Parva (The Book of the Sleeping Warriors)</summary>
+                                        <ul>
+                                            <li>The night-time massacre led by Ashwatthama</li>
+                                            <li>Vengeance on the Pandava camp while warriors slept</li>
+                                            <li>The sorrow and devastation ensuing from the nocturnal attack</li>
+                                            <li>Repercussions that deepen the tragedy of war</li>
+                                        </ul>
+                                    </details>
+                                    
+                                    <details>
+                                        <summary>Chapter 11: Stri Parva (The Book of the Women)</summary>
+                                        <ul>
+                                            <li>Expressions of grief and lamentation by the women affected by war</li>
+                                            <li>The emotional toll on the families of fallen warriors</li>
+                                            <li>Mourning rituals and reflections on the cost of conflict</li>
+                                            <li>Moral questions about duty, honor, and loss</li>
+                                        </ul>
+                                    </details>
+                                    
+                                    <details>
+                                        <summary>Chapter 12: Shanti Parva (The Book of Peace)</summary>
+                                        <ul>
+                                            <li>Discourses on dharma, justice, and the nature of rulership</li>
+                                            <li>Bhishma’s teachings from his bed of arrows</li>
+                                            <li>Philosophical insights on ethics and statecraft</li>
+                                            <li>The quest for inner peace amidst chaos</li>
+                                        </ul>
+                                    </details>
+                                    
+                                    <details>
+                                        <summary>Chapter 13: Anushasana Parva (The Book of Instructions)</summary>
+                                        <ul>
+                                            <li>Further moral and ethical guidelines for righteous living</li>
+                                            <li>Detailed instructions on duties, penance, and governance</li>
+                                            <li>Discussions on charity, duty, and the responsibilities of power</li>
+                                            <li>Reflections on the consequences of actions and karma</li>
+                                        </ul>
+                                    </details>
+                                    
+                                    <details>
+                                        <summary>Chapter 14: Ashvamedhika Parva (The Book of the Horse Sacrifice)</summary>
+                                        <ul>
+                                            <li>Yudhishthira’s performance of the Ashvamedha sacrifice</li>
+                                            <li>Elaborate rituals and ceremonies reaffirming royal authority</li>
+                                            <li>Political implications and consolidation of power</li>
+                                            <li>The reaffirmation of cosmic and earthly order</li>
+                                        </ul>
+                                    </details>
+                                    
+                                    <details>
+                                        <summary>Chapter 15: Ashramavasika Parva (The Book of the Hermitage)</summary>
+                                        <ul>
+                                            <li>The retreat of the elders into hermitage and ascetic life</li>
+                                            <li>Reflections on renunciation and the transient nature of life</li>
+                                            <li>Spiritual quests and the search for inner solace</li>
+                                            <li>Prelude to the eventual end of the Kuru era</li>
+                                        </ul>
+                                    </details>
+                                    
+                                    <details>
+                                        <summary>Chapter 16: Mausala Parva (The Book of the Clubs)</summary>
+                                        <ul>
+                                            <li>The internal strife and destruction of the Yadava dynasty</li>
+                                            <li>Culmination of infighting leading to catastrophic loss</li>
+                                            <li>The downfall of a once-mighty clan</li>
+                                            <li>Setting the stage for the epic’s final resolutions</li>
+                                        </ul>
+                                    </details>
+                                    
+                                    <details>
+                                        <summary>Chapter 17: Mahaprasthanika Parva (The Book of the Great Journey)</summary>
+                                        <ul>
+                                            <li>The final renunciation of the Pandavas as they leave the mortal world</li>
+                                            <li>The symbolic journey towards the Himalayas</li>
+                                            <li>Reflections on impermanence and the end of worldly life</li>
+                                            <li>The prelude to their ultimate fate</li>
+                                        </ul>
+                                    </details>
+                                    
+                                    <details>
+                                        <summary>Chapter 18: Swargarohanika Parva (The Book of the Ascension to Heaven)</summary>
+                                        <ul>
+                                            <li>The ascent of the Pandavas and Draupadi to the heavens</li>
+                                            <li>The resolution of karmic debts and final rewards for virtue</li>
+                                            <li>Reunion with the divine and cosmic order restored</li>
+                                            <li>The epic conclusion and eternal legacy of the heroes</li>
+                                        </ul>
+                                    </details>
+                                    
+                                </details>
+                                <details>
+                                    <summary>Authors</summary>
+                                    <li>Ancient Rishis (Yajnavalkya, Uddalaka, etc.)</li>
+                                     
+                                </details>
+                                <details>
+                                    <summary>Overview</summary>
+                                    <p>The Mahabharata is an ancient Indian epic, traditionally attributed to Ved Vyasa. It narrates the great Kurukshetra war between the Pandavas and Kauravas, intertwined with themes of duty (dharma), righteousness, and destiny. The epic contains the Bhagavad Gita, where Lord Krishna imparts spiritual wisdom to Arjuna. Spanning 100,000 verses, it explores politics, morality, and human nature. Key figures include Bhishma, Karna, Drona, Draupadi, and Shakuni. The war symbolizes the eternal struggle between good and evil, teaching lessons on ethics, devotion, and the consequences of actions (karma). Its wisdom remains relevant across cultures and generations. 🏹📖</p>
+                                </details>
+                                <details>
+                                    <summary>Competitive Exam Relevance</summary>
+                                    <li>Indian  philosophy</li>
+                                    <li>Metaphysics</li>
+                                    <li>Spiritual studies</li>
+                                </details>
+                                <details>
+                                    <summary>Purchase Links</summary>
+                                    <p>
+                                        <a href="https://www.amazon.in/dp/0143424780" target="_blank">Amazon</a>
+                                        <a href="https://www.flipkart.com/mahabharata/p/itmfc6z7dxncvjja" target="_blank">Flipkart</a>
+                                    </p>
+                                    
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback-form">
+                    <h2>Feedback</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="suggestion" class="form-label">Your Valuable Suggestion</label>
+                            <textarea class="form-control" id="suggestion" rows="3" required placeholder="your suggestion is important for us to improve more studies"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-success w-100">Submit Feedback</button>
+                    </form>
+                </div>
+            </div>
+            <a href="index.html">
+                <button   class="btn btn-outline-danger ">Back to home page</button>
+            </a>
+        </main>
+
+        <footer>
+            <p>© 2025 Book Showcase | All rights reserved</p>
+        </footer>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="bootstrap.bundle.js"></script>
+</body>
+</html>

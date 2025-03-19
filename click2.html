@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Showcase</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #000;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        
+        @media (orientation: portrait) {
+            .container {
+                background-image: linear-gradient(to bottom, #8a2387, #e94057, #f27121);
+                background-size: 200% 200%;
+            }
+            
+            .card {
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .col-md-4 {
+                padding: 15px;
+            }
+
+            .details-section summary {
+                padding: 10px;
+            }
+        }
+
+         
+        @media (orientation: landscape) {
+            .container {
+                background-image: linear-gradient(to right, #8a2387, #e94057, #f27121);
+                background-size: 200% 100%;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+
+        @keyframes bganm {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            animation: bganm 10s linear infinite;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid #555;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        h3 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .details-section {
+            margin: 10px 0;
+        }
+
+        details {
+            margin: 10px 0;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        summary {
+            padding: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        details li {
+            /* list-style: none; */
+            padding: 5px 20px;
+        }
+
+        details a {
+            color: #007bff;
+            text-decoration: none;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        details a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #999;
+            margin-top: auto;
+        }
+
+        .making-border {
+            height: 2px;
+            background-color: #555;
+            margin: 10px auto;
+            width: 50%;
+        }
+
+        .img-fluid {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .feedback-form {
+            padding: 20px;
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .feedback-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .feedback-form .form-control {
+            margin-bottom: 15px;
+        }
+
+        .feedback-form .btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+        }
+        .figcaption{
+            text-align: center;
+            font-size: 20px;
+            color: #000;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                <div>SACRED Book Showcase: Details</div>
+                <div class="making-border"></div>
+            </h1>
+        </header>
+
+        <main>
+            <h3>Book 2 : Ramayana</h3>
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="Ramayana.webp" class="img-fluid" alt="Book Cover" style="margin-bottom: 10px; margin-top: 20px; padding: 20px;" >
+                        <figcaption >
+                            The sacred Epic <strong>Ramayana</strong>, depicting Lord Rama's journey of righteousness, devotion, and dharma.
+                        </figcaption>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="details-section">
+                                <details>
+                                    <summary>Genre</summary>
+                                    <li> Epic</li>
+                                    <li> Itihasa</li>
+                                </details>
+                                <details>
+                                    <summary>Index</summary>
+                                    <li>
+                                        <b>Introduction</b>
+                                        <details>
+                                            <summary>Chapter 1 : Balakanda (The Book of Childhood)</summary>
+                                            <ul>
+                                                <li>Introduction to Valmiki and the composition of the Ramayana</li>
+                                                <li>Birth of Lord Rama and his brothers (Bharata, Lakshmana, Shatrughna)</li>
+                                                <li>Sage Vishwamitra takes Rama and Lakshmana to protect his yajna</li>
+                                                <li>Killing of demons (Tataka, Subahu, Maricha)</li>
+                                                <li>Rama breaks Lord Shiva’s bow and marries Sita</li>
+                                            </ul>
+                                        </details>
+
+                                        <details>
+                                            <summary>Chapter 2 : Ayodhyakanda (The Book of Ayodhya)</summary>
+                                            <ul>
+                                                <li>King Dasharatha plans Rama’s coronation</li>
+                                                <li>Kaikeyi’s two boons: Rama’s exile and Bharata’s coronation</li>
+                                                <li>Rama, Sita, and Lakshmana leave for the forest</li>
+                                                <li>Bharata refuses to rule and places Rama’s sandals on the throne</li>
+                                            </ul>
+                                        </details>
+
+                                        <details>
+                                            <summary>Chapter 3 : Aranyakanda (The Book of the Forest)</summary>
+                                            <ul>
+                                                <li>Life in the Dandaka forest</li>
+                                                <li>Meeting with sages like Agastya</li>
+                                                <li>Encounter with demoness Shurpanakha</li>
+                                                <li>Rama kills Khara and Dushana</li>
+                                                <li>Ravana kidnaps Sita with Maricha’s help</li>
+                                                <li>Jatayu’s brave fight and death</li>
+                                                <li>Rama meets Shabari</li>
+                                            </ul>
+                                        </details>
+
+                                        <details>
+                                            <summary>Chapter 4 : Kishkindhakanda (The Book of Kishkindha)</summary>
+                                            <ul>
+                                                <li>Rama meets Hanuman and Sugriva</li>
+                                                <li>Rama helps Sugriva defeat Vali and become king of Kishkindha</li>
+                                                <li>Sugriva sends Vanara army in search of Sita</li>
+                                                <li>Hanuman learns about Sita’s location in Lanka from Sampati</li>
+                                            </ul>
+                                        </details>
+
+                                        <details>
+                                            <summary>Chapter 5 : Sundarakanda (The Beautiful Book)</summary>
+                                            <ul>
+                                                <li>Hanuman’s journey to Lanka</li>
+                                                <li>Meeting Sita in Ashok Vatika</li>
+                                                <li>Hanuman destroys Lanka and is captured</li>
+                                                <li>Hanuman burns Lanka and returns to Rama with Sita’s message</li>
+                                            </ul>
+                                        </details>
+
+                                        <details>
+                                            <summary>Chapter 6 : Yuddhakanda (The Book of War)</summary>
+                                            <ul>
+                                                <li>Rama’s army builds a bridge (Setu) to Lanka</li>
+                                                <li>The great battle between Rama and Ravana</li>
+                                                <li>Kumbhakarna and Indrajit’s defeat</li>
+                                                <li>Rama kills Ravana and rescues Sita</li>
+                                                <li>Rama and Sita return to Ayodhya</li>
+                                            </ul>
+                                        </details>
+
+                                        <details>
+                                            <summary>Chapter 7 : Uttarakanda (The Book of Aftermath)</summary>
+                                            <ul>
+                                                <li>Rama’s rule as king (Rama Rajya)</li>
+                                                <li>Sita’s exile and her stay in Valmiki’s ashram</li>
+                                                <li>Birth of Lava and Kusha</li>
+                                                <li>Sita’s final test and return to Mother Earth</li>
+                                                <li>Rama’s departure from the world</li>
+                                            </ul>
+                                        </details>
+                                </details>
+                                <details>
+                                    <summary>Authors</summary>
+                                    <li>Traditionally attributed to Maharishi Valmiki</li>
+                                     
+                                </details>
+                                <details>
+                                    <summary>Overview</summary>
+                                    <p>The Ramayana, attributed to Valmiki, is an ancient Indian epic that narrates the story of Lord Rama, the prince of Ayodhya. Exiled for 14 years due to a palace conspiracy, Rama, along with his wife Sita and brother Lakshmana, ventures into the forest. The demon king Ravana abducts Sita, leading Rama to ally with Hanuman and the Vanara army to rescue her. After an epic battle in Lanka, Ravana is defeated, and Sita is freed. Rama returns to Ayodhya and is crowned king. The Ramayana emphasizes dharma (duty), devotion, and righteousness, shaping Hindu culture and philosophy for centuries.</p>
+                                </details>
+                                <details>
+                                    <summary>Competitive Exam Relevance</summary>
+                                    <li>General Knowledge & History (UPSC, SSC, State PSCs, Railways, Banking)</li>
+                                    <li>Ethics & Morality (UPSC GS-IV, MBA Entrance, Civil Services Interviews)</li>
+                                    <li>Indian Literature & Languages (UGC-NET, Literature Exams, IAS Optional – Literature)</li>
+                                    <li>Essay Writing & Descriptive Exams (UPSC, State PSCs, Judiciary, Banking PO, MBA Exams)</li>
+                                </details>
+                                <details>
+                                    <summary>Purchase Links</summary>
+                                    <p>
+                                        <a href="https://www.amazon.in/dp/0140298663" target="_blank">Amazon</a>
+                                        <a href="https://www.flipkart.com/ramayana/p/itmdytfzzv5hjhvw" target="_blank">Flipkart</a>
+                                    </p>
+                                    
+                                    
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback-form">
+                    <h2>Feedback</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="suggestion" class="form-label">Your Valuable Suggestion</label>
+                            <textarea class="form-control" id="suggestion" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-success w-100">Submit Feedback</button>
+                    </form>
+                </div>
+            </div>
+            <a href="index.html">
+                <button   class="btn btn-outline-danger ">Back to home page</button>
+            </a>
+        </main>
+
+        <footer>
+            <p>© 2025 Book Showcase | All rights reserved</p>
+        </footer>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="bootstrap.bundle.js"></script>
+</body>
+</html>

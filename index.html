@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Showcase</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .page-container {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Portrait Mode Styles */
+        @media screen and (orientation: portrait) {
+            .page-container {
+                background-image: linear-gradient(to bottom, #e8aa90, #e94057, #fc0202);
+                background-size: 100% 200%;
+                animation: backgroundAnimation 10s linear infinite;
+            }
+            .flip-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                
+            }
+            
+            .flip {
+                width: 80%;
+                max-width: 300px;
+                height: 400px;
+                margin-top: 130px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .flip{
+                margin-bottom: 25px;
+                align-items: center;
+            }
+            /* .section{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            } */
+        }
+
+        /* Landscape Mode Styles */
+        @media screen and (orientation: landscape) {
+            .page-container {
+                background-image: linear-gradient(to right, #ec7878, #e94057, #f80707);
+                background-size: 200% 100%;
+                animation: backgroundAnimation 10s linear infinite;
+            }
+            .flip-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                gap: 15px;
+                margin: 15px;
+            }
+            .flip {
+                width: 200px;
+                height: 300px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 22px;
+            }
+
+            section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* height: 100vh; Centers content vertically */
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: gold;
+        }
+        div {
+            margin: 10px 0;
+        }
+        .highlight {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        }
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #000;
+            border-bottom: 1px solid #555;
+            width: 100%;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+            width: 100%;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .flip {
+            cursor: pointer;
+            perspective: 1200px;
+        }
+        .flip-front {
+            border: 20px outset #da3a21;
+            width: 100%;
+            height: 100%;
+            transition: transform 1.2s;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        .flip img, .flip-backs {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+        .flip img {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .flip-backs {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotateY(180deg);
+        }
+        .flip:hover .flip-front {
+            transform: rotateY(180deg);
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #000;
+            font-size: 14px;
+            color: #999;
+            width: 100%;
+        }
+        a{
+            text-decoration: none;
+            color:white;
+            justify-content: center;
+            font-size: 13px;
+        }
+        b{
+            font-size: 20px;
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <h1>
+                Welcome to Book Showcase
+            </h1>
+        </header>
+        
+        <main>
+            <h2>
+                Explore Books
+            </h2>
+
+            <!-- image 1 -->
+            <div class="flip-container">
+                <div class="flip">
+                    <div class="flip-front">
+                        <img src="Bhagwatgita.webp" alt="Book 1" width="250px" height="400px">
+                        <div class="flip-backs">
+                            <a href="click1.html">
+                               Click here to enter the spiritual world of <b>Bhagvatad Gita</b> 
+                            </a>
+                        </div>
+                         
+                    </div>
+                </div>
+                 
+                
+
+                <!-- image 2 -->
+                <div class="flip">
+                    <div class="flip-front">
+                        <img src="Ramayana.webp" alt="Book 2">
+                        <div class="flip-backs">
+                            <a href="click2.html">
+                                Click here to enter the spiritual world of <b>Ramayana</b> 
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- image 3 -->
+                <div class="flip">
+                    <div class="flip-front">
+                        <img src="Mahabharat.webp" alt="Book 3">
+                        <div class="flip-backs">
+                            <a href="click3.html">
+                                Click here to enter the spiritual world of <b>Mahabharat</b> 
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+    
+                
+            </div>
+            <section>
+                <div>1. <span class="bi  bi-book-fill"></span>  Bhagavad Gita – The divine conversation of duty, devotion, and righteousness.</div>
+                <div>2. <span class="bi  bi-book-fill"></span> Ramayana – The legendary tale of Lord Rama’s journey of virtue and valor.</div>
+                <div>3. <span class="bi  bi-book-fill"></span> Mahabharata – The grand epic of war, dharma, and destiny.</div>
+                <div class="highlight"><span class="bi  bi-star-fill "></span> Discover, Read, and Get Inspired! <span class="bi  bi-star-fill"></span></div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>
+                © 2025 Book Showcase | All rights reserved
+            </p>
+        </footer>
+    </div>
+    <script src="jquery.js"></script>
+    <script src="bootstrap.bundle.js"></script>
+</body>
+</html>

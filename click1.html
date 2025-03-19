@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Showcase</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #000;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        
+        @media (orientation: portrait) {
+            .container {
+                background-image: linear-gradient(to bottom, #8a2387, #e94057, #f27121);
+                background-size: 200% 200%;
+            }
+            
+            .card {
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .col-md-4 {
+                padding: 15px;
+            }
+
+            .details-section summary {
+                padding: 10px;
+            }
+        }
+
+         
+        @media (orientation: landscape) {
+            .container {
+                background-image: linear-gradient(to right, #8a2387, #e94057, #f27121);
+                background-size: 200% 100%;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+
+        @keyframes bganm {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            animation: bganm 10s linear infinite;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid #555;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        h3 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .details-section {
+            margin: 10px 0;
+        }
+
+        details {
+            margin: 10px 0;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        summary {
+            padding: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        details li {
+            /* list-style: none; */
+            padding: 5px 20px;
+        }
+
+        details a {
+            color: #007bff;
+            text-decoration: none;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        details a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #999;
+            margin-top: auto;
+        }
+
+        .making-border {
+            height: 2px;
+            background-color: #555;
+            margin: 10px auto;
+            width: 50%;
+        }
+
+        .img-fluid {
+            width: 100%;
+            height: auto;
+            object-fit: cover; 
+            border-radius: 8px;
+        }
+
+        .feedback-form {
+            padding: 20px;
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .feedback-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .feedback-form .form-control {
+            margin-bottom: 15px;
+        }
+
+        .feedback-form .btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+        }
+        .figcaption{
+            text-align: center;
+            font-size: 20px;
+            padding-top: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: red;
+            margin-right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                <div>
+                    SACRED Book Showcase: Details
+                     
+                </div>
+                <div class="making-border"></div>
+            </h1>
+        </header>
+
+        <main>
+            <h3>Book 1: Bhagavad-Gita</h3>
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="Bhagwatgita.webp" class="img-fluid" alt="Book Cover" style="margin-bottom: 10px; margin-top: 20px; padding: 20px;" >
+                        <figcaption>
+                            The divine discourse of <strong>Bhagavad Gita</strong>, where Lord Krishna imparts wisdom on duty, devotion, and self-realization.
+                        </figcaption>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="details-section">
+                                <details>
+                                    <summary>Genre</summary>
+                                    <li> Hindu Scripture</li>
+                                    <li> Philosophy</li>
+                                </details>
+                                <details>
+                                    <summary>Index</summary>
+                                    <li><b>Introduction</b></li>
+                                    <li>Chapter 1: Arjuna Vishada Yoga </li>
+                                    <li>Chapter 2: Sankhya Yoga</li>
+                                    <li>Chapter 3: Karma Yoga (The Yoga of Action)</li>
+                                    <li>Chapter 4: Jnana-Karma-Sanyasa Yoga (The Yoga of Knowledge and Renunciation of Action)</li>
+                                    <li>Chapter 5: Karma-Sanyasa Yoga (The Yoga of Renunciation)</li>
+                                    <li>Chapter 6: Dhyana Yoga (The Yoga of Meditation)</li>
+                                    <li>Chapter 7: Jnana-Vijnana Yoga (The Yoga of Knowledge and Wisdom)</li>
+                                    <li>Chapter 8: Aksara-Parabrahma Yoga (The Yoga of the Imperishable Absolute)</li>
+                                    <li>Chapter 9: Raja-Vidya-Raja-Guhya Yoga (The Yoga of Royal Knowledge and Royal Secret)</li>
+                                    <li>Chapter 10: Vibhuti Yoga (The Yoga of Divine Glories)</li>
+                                    <li>Chapter 11: Vishvarupa-Darshana Yoga (The Yoga of the Vision of the Universal Form)</li>
+                                    <li>Chapter 12: Bhakti Yoga (The Yoga of Devotion)</li>
+                                    <li>Chapter 13: Ksetra-Ksetrajna-Vibhaga Yoga (The Yoga of the Field and the Knower of the Field)</li>
+                                    <li>Chapter 14: Gunatraya-Vibhaga Yoga (The Yoga of the Three Gunas)</li>
+                                    <li>Chapter 15: Purushottama Yoga (The Yoga of the Supreme Divine Personality)</li>
+                                    <li>Chapter 16: Daivasura-Sampad-Vibhaga Yoga (The Yoga of the Divine and the Demonic Qualities)</li>
+                                    <li>Chapter 17: Sraddhatraya-Vibhaga Yoga (The Yoga of Threefold Faith)</li>
+                                    <li>Chapter 18: Moksha-Sanyasa Yoga (The Yoga of Liberation and Renunciation)</li>
+                                </details>
+                                <details>
+                                    <summary>Authors</summary>
+                                    <li> Traditionally attributed to Ved Vyasa</li>
+                                     
+                                </details>
+                                <details>
+                                    <summary>Overview</summary>
+                                    <p> The Bhagavad Gita is a sacred Hindu scripture, part of the Mahabharata, where Lord Krishna imparts divine wisdom to Arjuna on the battlefield of Kurukshetra. Facing moral confusion, Arjuna hesitates to fight, and Krishna enlightens him on duty (dharma), selfless action (karma yoga), devotion (bhakti yoga), and knowledge (jnana yoga). It teaches detachment, righteousness, and the eternal nature of the soul. The Gita emphasizes surrendering to God, maintaining equanimity, and fulfilling one’s responsibilities without attachment to results. Its 18 chapters provide timeless spiritual guidance, making it a universal text on philosophy, ethics, and self-realization. 🙏📖</p>
+                                </details>
+                                <details>
+                                    <summary>
+                                        Competitive Exam Relevance
+                                    </summary>
+                                    <li>
+                                        Indian culture
+                                    </li>
+                                    <li>
+                                        literature
+                                    </li>
+                                    <li>
+                                        moral philosophy
+                                    </li>
+                                </details>
+                                <details>
+                                    <summary>Purchase Links</summary>
+                                    <p>
+                                        <a href="https://www.amazon.in/dp/9389157608" target="_blank">Amazon</a>
+                                        <a href="https://www.flipkart.com/bhagavad-gita/p/itmf3kzryhuzg26v" target="_blank">Flipkart</a>
+                                    </p>
+                                    
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback-form">
+                    <h2>Feedback</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="suggestion" class="form-label">Your Valuable Suggestion</label>
+                            <textarea class="form-control" id="suggestion" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-success w-100">Submit Feedback</button>
+                    </form>
+                </div>
+            </div>
+            <a href="index.html">
+                <button   class="btn btn-outline-danger">Back to home page</button>
+            </a>
+        </main>
+
+        <footer>
+            <p>© 2025 Book Showcase | All rights reserved</p>
+        </footer>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="bootstrap.bundle.js"></script>
+</body>
+</html>
